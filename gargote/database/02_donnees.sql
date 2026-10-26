@@ -19,11 +19,13 @@ INSERT INTO plat (nom, prix, id_categorie) VALUES
     ('Café',                       1000, 3);
 
 INSERT INTO commande (date_commande, numero_table) VALUES
+    (now() - interval '3 hour',  2),
     (now() - interval '2 hours', 3),
     (now() - interval '1 hour',  1);
 
 INSERT INTO commande_ligne (id_commande, id_plat, quantite, prix_unitaire) VALUES
     (1, 2, 2, 8000),
     (1, 8, 2,  500),
-    (2, 6, 1, 6000),
-    (2, 10, 1, 1000);
+    (3, 6, 1, 6000),
+    (3, 10, 1, 1000),
+    (3, 10, 1, 1000);
